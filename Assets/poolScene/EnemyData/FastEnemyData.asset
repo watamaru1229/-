@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afdc4eebaeb834ca4ac02513b08de257, type: 3}
+  m_Name: FastEnemyData
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyData
+  speed: 10
+  hp: 1
+  score: 20
+  color: {r: 1, g: 1, b: 0, a: 1}
+  shootInterval: 2
+  drops:
+  - itemData: {fileID: 0}
+    weight: 50
+  - itemData: {fileID: 11400000, guid: 6f5ee3d50ebab49c4807ed5a59d02809, type: 2}
+    weight: 40
+  - itemData: {fileID: 11400000, guid: afd6a6a9ee72f43b59f368675aff3b4e, type: 2}
+    weight: 9
+  - itemData: {fileID: 11400000, guid: d1806c28da4cd4db9b51d371836a21e8, type: 2}
+    weight: 1
