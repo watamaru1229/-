@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace poolScene
+namespace PoolScene
 {
     /// <summary>
     /// 敵Prefabを種類ごとに再利用し、重み付き抽選で出現させる敵プール。

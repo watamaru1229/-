@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace poolScene
+namespace PoolScene
 {
     /// <summary>
     /// 3Dゲーム全体の進行状態、スコア表示、HP表示、ゲームオーバー処理を管理するクラス。

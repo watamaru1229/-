@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace poolScene
+namespace PoolScene
 {
     /// <summary>
     /// 敵プールで使う、敵データ・Prefab・出現重みをまとめた設定クラス。

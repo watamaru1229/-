@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace poolScene
+namespace PoolScene
 {
     /// <summary>
     /// プレイヤー弾の移動、寿命管理、敵へのダメージ、プールへの返却を行うクラス。
@@ -27,6 +27,9 @@ namespace poolScene
 
         // 自動で消えるまでの秒数。
         private float _lifetime;
+
+        // ReturnToPoolから非アクティブ化している最中かどうか。
+        private bool _isReturningToPool;
 
         /// <summary>
         /// 弾データの標準値で弾を初期化する。
@@ -70,14 +73,17 @@ namespace poolScene
             _poolEntry = poolEntry;
         }
 
-        // 毎フレーム前進し、寿命を超えたらプールへ戻す。
-        private void Update()
+        /// <summary>
+        /// プール管理側から呼ばれ、1フレーム分の移動と寿命判定を行う。
+        /// </summary>
+        /// <param name="deltaTime">前フレームからの経過秒数。</param>
+        public void Tick(float deltaTime)
         {
-            _lifeTimer += Time.deltaTime;
+            _lifeTimer += deltaTime;
 
             transform.Translate(
                 Vector3.forward *
-                (_speed * Time.deltaTime));
+                (_speed * deltaTime));
 
             if (_lifeTimer > _lifetime)
             {
@@ -109,14 +115,36 @@ namespace poolScene
         // 弾を使用可能状態としてプールに返し、非表示にする。
         private void ReturnToPool()
         {
+            if (_isReturningToPool ||
+                _poolEntry == null ||
+                _poolEntry.isAvailable)
+            {
+                return;
+            }
+
+            _isReturningToPool = true;
             _pool?.ReturnBullet(_poolEntry);
             gameObject.SetActive(false);
+            _isReturningToPool = false;
         }
 
-        // 外部から非表示にされた場合もプールへ返却する。
+        // 外部から直接非表示にされた場合だけ、返却経路へ流す。
         private void OnDisable()
         {
-            _pool?.ReturnBullet(_poolEntry);
+            if (_isReturningToPool ||
+                _poolEntry == null ||
+                _poolEntry.isAvailable)
+            {
+                return;
+            }
+
+            ReturnToPool();
+        }
+
+        // 外部から破棄された場合、プール側で再利用候補から外せるようにする。
+        private void OnDestroy()
+        {
+            _pool?.MarkBulletDestroyed(_poolEntry);
         }
     }
 }

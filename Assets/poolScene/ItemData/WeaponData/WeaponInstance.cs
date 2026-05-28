@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace poolScene.ItemData.WeaponData
+namespace PoolScene.ItemData.WeaponData
 {
     /// <summary>
     /// 実際に装備・所持する武器の性能を保持するクラス。WeaponDataから固定値またはランダム補正付きで作成する。

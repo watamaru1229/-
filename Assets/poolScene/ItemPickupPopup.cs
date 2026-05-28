@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using poolScene.ItemData.WeaponData;
+using PoolScene.ItemData.WeaponData;
 
-namespace poolScene
+namespace PoolScene
 {
     /// <summary>
     /// アイテム取得時に画面右上へ表示するポップアップUIを動的に作成して表示するクラス。

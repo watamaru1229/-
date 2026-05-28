@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace poolScene
+namespace PoolScene
 {
     /// <summary>
     /// 敵プールから敵を取り出し、一定間隔でフィールド奥に出現させるクラス。

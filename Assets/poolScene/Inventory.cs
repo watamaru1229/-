@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using poolScene.ItemData.WeaponData;
+using PoolScene.ItemData.WeaponData;
 using UnityEngine;
 
-namespace poolScene
+namespace PoolScene
 {
     /// <summary>
     /// 取得した通常アイテムと武器インスタンスを保持する簡易インベントリ。

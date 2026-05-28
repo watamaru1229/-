@@ -1,4 +1,4 @@
-using poolScene;
+using PoolScene;
 using UnityEngine;
 
 namespace EnemyData

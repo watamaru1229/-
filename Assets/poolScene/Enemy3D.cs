@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace poolScene
+namespace PoolScene
 {
     /// <summary>
     /// 敵の移動、射撃、被ダメージ、死亡時のスコア加算とアイテムドロップを管理するクラス。

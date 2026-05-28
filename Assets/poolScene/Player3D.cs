@@ -1,9 +1,9 @@
 using System.Collections;
-using poolScene.ItemData.WeaponData;
+using PoolScene.ItemData.WeaponData;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace poolScene
+namespace PoolScene
 {
     /// <summary>
     /// プレイヤーの移動、視点操作、射撃、被ダメージ、武器装備を担当するクラス。

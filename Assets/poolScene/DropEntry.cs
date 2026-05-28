@@ -1,4 +1,4 @@
-namespace poolScene
+namespace PoolScene
 {
     /// <summary>
     /// 敵撃破時にドロップするアイテム候補と抽選重みをまとめた設定クラス。

@@ -1,7 +1,7 @@
-using poolScene.ItemData.WeaponData;
+using PoolScene.ItemData.WeaponData;
 using UnityEngine;
 
-namespace poolScene
+namespace PoolScene
 {
     /// <summary>
     /// フィールドに落ちているアイテムを表し、プレイヤー接触時にインベントリへ追加するクラス。

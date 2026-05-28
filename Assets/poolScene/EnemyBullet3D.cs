@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace poolScene
+namespace PoolScene
 {
     /// <summary>
     /// 敵が発射する弾の移動、プレイヤーへのダメージ、画面外での削除を行うクラス。

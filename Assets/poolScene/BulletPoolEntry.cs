@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace poolScene
+namespace PoolScene
 {
     /// <summary>
     /// 弾プール内で1つの弾オブジェクトと利用状態を保持する設定クラス。
@@ -16,5 +16,8 @@ namespace poolScene
 
         // 現在この弾が再利用可能かどうか。
         public bool isAvailable;
+
+        // プール管理上、このエントリが有効なインスタンスを持っているかどうか。
+        public bool isAlive;
     }
 }
